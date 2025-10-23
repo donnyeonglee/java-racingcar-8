@@ -46,4 +46,19 @@ public class EnterVariable {
             throw new IllegalArgumentException("잘못된 입력입니다.\n에러 메세지 : 이름은 중복될 수 없습니다.");
         }
     }
+
+    public int enterAttemptNum() { // 시도할 횟수 입력
+        int inputNum;
+        System.out.println("시도할 횟수는 몇 회인가요?");
+        try {
+            inputNum = Integer.parseInt(Console.readLine());
+        } catch (Exception e) {
+            throw new IllegalArgumentException("잘못된 입력입니다.\n에러 메세지 : " + e.getMessage());
+        }
+        // 입력 받은 시도 횟수가 자연수인지 확인
+        if (inputNum <= 0) {
+            throw new IllegalArgumentException("잘못된 입력입니다.\n에러 메세지 : 시도할 횟수는 자연수여야 합니다.");
+        }
+        return inputNum;
+    }
 }
