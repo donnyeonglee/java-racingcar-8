@@ -31,6 +31,35 @@ public class Application {
             printCarPosition(carList);
             System.out.println();
         }
+
+        // 5. 최종 우승자의 현재 위치 저장
+        int maxPosition = 0;
+        for (Car car : carList) {
+            if (car.position >= maxPosition) {
+                maxPosition = car.position;
+            }
+        }
+        System.out.println("가장 멀리 간 위치 : " + maxPosition); // 테스트 출력
+
+        // 6. 최종 우승자 리스트 생성
+        List<String> winnerList = new ArrayList<>();
+        for (Car car : carList) {
+            if (car.position == maxPosition) {
+                winnerList.add(car.name);
+            }
+        }
+
+        // 7. 최종 우승자 출력
+        for (num = 0; num <= winnerList.size() - 1; num++) {
+            String winner;
+            winner = winnerList.get(num);
+            if (num == winnerList.size() - 1) {
+                System.out.println(winner);
+            }
+            else {
+                System.out.print(winner + ", ");
+            }
+        }
     }
 
     private static void attemptAllCars(List<Car> carList) {
