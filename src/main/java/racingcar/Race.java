@@ -56,7 +56,7 @@ public class Race {
                 maxPosition = car.position;
             }
         }
-        System.out.println("가장 멀리 간 위치 : " + maxPosition); // 테스트 출력
+        // System.out.println("가장 멀리 간 위치 : " + maxPosition); // 테스트 출력
         return maxPosition;
     }
 }
