@@ -13,7 +13,7 @@ public class Car {
     public void attempt() {
         int randomNum = Randoms.pickNumberInRange(0, 9);
         if (randomNum >= 4) {
-            this.position+=1;
+            this.position += 1;
         }
         System.out.println("자동차 이름 : " + name + " 무작위 값 : " + randomNum + " 현재 위치 : " + position); //테스트 출력
     }

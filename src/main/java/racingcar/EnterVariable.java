@@ -1,6 +1,7 @@
 package racingcar;
 
 import camp.nextstep.edu.missionutils.Console;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,7 +12,7 @@ public class EnterVariable {
 
     public List<String> enterNames() { // 경주할 자동차 이름 입력
         String inputNames;
-        List<String> nameList = new ArrayList <> ();
+        List<String> nameList = new ArrayList<>();
         System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
         try {
             inputNames = Console.readLine();
@@ -25,7 +26,7 @@ public class EnterVariable {
             checkNameLength(name);
         }
         checkDuplicateName(nameList);
-        return(nameList);
+        return (nameList);
     }
 
     private void checkNameLength(String name) { // 이름이 5자 이하인지 확인
