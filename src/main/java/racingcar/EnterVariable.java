@@ -1,7 +1,5 @@
 package racingcar;
 
-import camp.nextstep.edu.missionutils.Console;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,13 +7,15 @@ import java.util.Set;
 import java.util.HashSet;
 
 public class EnterVariable {
+    String inputNames;
+    String consoleInputNum;
 
-    public List<String> enterNames() { // 경주할 자동차 이름 입력
-        String inputNames;
+    public List<String> enterNames(String inputNames) { // 경주할 자동차 이름 입력
+        this.inputNames = inputNames;
         List<String> nameList = new ArrayList<>();
-        System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
+
         try {
-            inputNames = Console.readLine();
+            //inputNames = Console.readLine(); // 삭제 예정
             nameList = Arrays.asList(inputNames.split(","));
 
         } catch (Exception e) {
@@ -48,11 +48,11 @@ public class EnterVariable {
         }
     }
 
-    public int enterAttemptNum() { // 시도할 횟수 입력
+    public int enterAttemptNum(String consoleInputNum) { // 시도할 횟수 입력
+        this.consoleInputNum = consoleInputNum;
         int inputNum;
-        System.out.println("시도할 횟수는 몇 회인가요?");
         try {
-            inputNum = Integer.parseInt(Console.readLine());
+            inputNum = Integer.parseInt(consoleInputNum);
         } catch (Exception e) {
             throw new IllegalArgumentException("잘못된 입력입니다.\n에러 메세지 : " + e.getMessage());
         }
