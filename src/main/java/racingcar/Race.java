@@ -36,7 +36,7 @@ public class Race {
                 winnerList.add(car.name);
             }
         }
-        String winner = String.join(",", winnerList);
+        String winner = String.join(", ", winnerList);
         return "최종 우승자 : " + winner;
         //System.out.println("최종 우승자 : " + winner);
     }
