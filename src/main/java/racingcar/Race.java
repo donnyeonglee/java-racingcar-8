@@ -21,7 +21,7 @@ public class Race {
         System.out.println();
         System.out.println("실행 결과");
         for (num = 1; num <= attemptNum; num++) {
-            attemptAllCars(carList, makeRandomNumberList(carList));
+            attemptAllCars(carList);
             printCarPosition(carList);
             System.out.println();
         }
@@ -40,22 +40,11 @@ public class Race {
         return "최종 우승자 : " + winner;
     }
 
-    private void attemptAllCars(List<Car> carList, List<Integer> randomNumberList) { // 자동차 리스트 내 모든 자동차에 대해 1회 시도
-        int i;
-        for (i = 0; i < carList.size(); i++) {
-            Car car = carList.get(i);
-            int randomNum = randomNumberList.get(i);
-            car.attempt(randomNum);
-        }
-    }
-
-    private List<Integer> makeRandomNumberList(List<Car> carList) {
-        List<Integer> randomNumberList = new ArrayList<Integer>();
+    private void attemptAllCars(List<Car> carList) { // 자동차 리스트 내 모든 자동차에 대해 1회 시도
         for (Car car : carList) {
             int randomNum = Randoms.pickNumberInRange(0, 9);
-            randomNumberList.add(randomNum);
+            car.attempt(randomNum);
         }
-        return randomNumberList;
     }
 
     private void printCarPosition(List<Car> carList) { // 현재 자동차 위치 시각화
