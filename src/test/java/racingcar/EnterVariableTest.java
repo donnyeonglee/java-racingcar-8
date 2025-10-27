@@ -166,5 +166,4 @@ class EnterVariableTest {
             enterVariable.enterAttemptNum(inputAttemptNum);
         });
     }
-
 }
