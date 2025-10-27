@@ -38,7 +38,6 @@ public class Race {
         }
         String winner = String.join(", ", winnerList);
         return "최종 우승자 : " + winner;
-        //System.out.println("최종 우승자 : " + winner);
     }
 
     private void attemptAllCars(List<Car> carList, List<Integer> randomNumberList) { // 자동차 리스트 내 모든 자동차에 대해 1회 시도
@@ -72,7 +71,6 @@ public class Race {
                 maxPosition = car.position;
             }
         }
-        // System.out.println("가장 멀리 간 위치 : " + maxPosition); // 테스트 출력
         return maxPosition;
     }
 }

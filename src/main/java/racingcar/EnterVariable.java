@@ -15,7 +15,6 @@ public class EnterVariable {
         List<String> nameList = new ArrayList<>();
 
         try {
-            //inputNames = Console.readLine(); // 삭제 예정
             nameList = Arrays.asList(inputNames.split(","));
 
         } catch (Exception e) {
