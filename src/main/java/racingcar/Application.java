@@ -34,6 +34,6 @@ public class Application {
 
 
         // 5. 최종 우승자 출력
-        race.printWinner(carList);
+        System.out.println(race.printWinner(carList));
     }
 }

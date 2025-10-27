@@ -28,7 +28,7 @@ public class Race {
     }
 
     // 최종 우승자 출력
-    public void printWinner(List<Car> carList) { //
+    public String printWinner(List<Car> carList) { //
         List<String> winnerList = new ArrayList<>();
         int maxPosition = getMaxPosition(carList);
         for (Car car : carList) {
@@ -37,7 +37,8 @@ public class Race {
             }
         }
         String winner = String.join(",", winnerList);
-        System.out.println("최종 우승자 : " + winner);
+        return "최종 우승자 : " + winner;
+        //System.out.println("최종 우승자 : " + winner);
     }
 
     private void attemptAllCars(List<Car> carList, List<Integer> randomNumberList) { // 자동차 리스트 내 모든 자동차에 대해 1회 시도
